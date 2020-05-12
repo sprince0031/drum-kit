@@ -11,56 +11,107 @@ html, body {
     min-width: 100%;
     height: 100vh;
     text-align: center;
-    background: radial-gradient(#adcbfa, #2e6cd1);
+    background: radial-gradient(#4180e7, #00258a);
 }
 
 
 .title {
+    
     font-family: Marck Script, sans-serif;
+    color: aliceblue;
     padding: 3.5%;
     font-size: 4.5em;
     font-weight: bold;
 }
 
 .instrument-btn {
-    border: 1px solid #eee;
+    margin: 5px;
+    border: 5px solid #ccc;
     border-radius: 10px;
     background-color: aliceblue;
     background-position: center;
-    background-size: 50px;
+    background-size: 125%;
     background-repeat: no-repeat;
     height: 75px;
     width: 75px;
 }
 
+.instrument-btn-clicked {
+    border-color: #2e6cd1;
+}
+
 #w {
     background-image: url("./images/tom1.png");
+    background-position: -18px 20px;
 }
 
 #a {
-    background-image: url("./images/tom2.png");
+    background-image: url("./images/tom3.png");
+    background-position: -18px 20px;
     float: right;
 }
 
 #s {
-    background-image: url("./images/tom3.png");
+    background-image: url("./images/tom2.png");
+    background-position: 0px 20px;
 }
 
 #d {
     background-image: url("./images/tom4.png");
+    background-position: 0px 20px;
     float: left;
 }
 
 #j {
     background-image: url("./images/snare.png");
+    background-position: -16px 18px;
     float: right;
 }
 
 #k {
     background-image: url("./images/kick.png");
+    background-position: 0px 12px;
 }
 
 #l {
     background-image: url("./images/crash.png");
+    background-position: 0px 22px;
     float: left;
 }
+
+.keyboard-shortcuts-revealer {
+    color: #eee;
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+.hidden {
+    transition: ease-in 0.2s;
+    visibility: hidden;
+}
+
+.reveal {
+    transition: ease-in 0.2s;
+    visibility: visible;
+    padding: 1% !important;
+    margin: 1% 20% !important;
+    border-radius: 15px;
+    background-color: #4180e755;
+    z-index: 100;
+}
+
+ul.left-list {
+    text-align: right;
+}
+
+ul.right-list {
+    text-align: left;
+}
+
+li {
+    font-weight: 600;
+    color: aliceblue;
+    padding: 3px;
+    list-style: none;
+}
+

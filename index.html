@@ -10,12 +10,29 @@
 <body>
     <div class="container">
         <h1 class="title">Welcome to your virtual drum kit!</h1>
+        <div class="row hidden">
+            <div class="col">
+                <ul class="left-list">
+                    <li>W - tom 1</li>
+                    <li>A - tom 3</li>
+                    <li>S - tom 2</li>
+                    <li>D - tom 4</li>
+                </ul>
+            </div>
+            <div class="col">
+                <ul class="right-list">
+                    <li>J - Snare</li>
+                    <li>K - Kick Bass</li>
+                    <li>L - Crash</li>
+                </ul>
+            </div>
+        </div>
         <div class="row">
             <div class="col" id="top-left">
                 <button class="instrument-btn" id="w"></button>
             </div>
             <div class="col" id="top-right">
-                <button class="keyboard-shortcuts-btn">Show Keyboard Shortcuts</button>
+                <span class="keyboard-shortcuts-revealer">Press 'H' to toggle keyboard shortcuts legend</span>
             </div>
         </div>
         <div class="row">
