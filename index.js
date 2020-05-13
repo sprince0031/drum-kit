@@ -61,25 +61,6 @@ for (let i = 0; i < buttonElementList.length; i++) {
   });
 }
 
-let keyboardShortcutToggle = true;
-
-document.addEventListener('keydown', event => {
-  if (event.key === 'h') {
-    if (keyboardShortcutToggle) {
-      document.querySelector(".hidden").classList.toggle("reveal");
-    } else {
-      document.querySelector(".reveal").classList.toggle("hidden");
-    }
-  } else {
-    soundPlayer(event.key);
-    buttonAnimation(event.key);
-  }
-});
-
-// document.addEventListener('keyup', event => {
-//     colourOff(event.key);
-// });
-
 function buttonAnimation(id) {
   let button = document.querySelector("#"+id);
   button.classList.add("instrument-btn-clicked");
@@ -87,3 +68,29 @@ function buttonAnimation(id) {
     button.classList.remove("instrument-btn-clicked");
   }, 100);
 }
+
+// let keyboardShortcutToggle = true;
+
+// document.addEventListener('keydown', event => {
+//   if (event.key === 'h') {
+//     if (keyboardShortcutToggle) {
+//       document.querySelector(".hidden").classList.toggle("reveal");
+//     } else {
+//       document.querySelector(".reveal").classList.toggle("hidden");
+//     }
+//   } else {
+//     soundPlayer(event.key);
+//     buttonAnimation(event.key);
+//   }
+// });
+
+$(document).on("keydown", function(event) {
+  if (event.key === "h") {
+    $(".keyboard-shortcuts").slideToggle();
+  } else {
+    soundPlayer(event.key);
+    buttonAnimation(event.key);
+  }
+});
+
+// Man... jQuery is so cool!
