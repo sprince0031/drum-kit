@@ -38,6 +38,8 @@ html, body {
 
 .instrument-btn-clicked {
     border-color: #2e6cd1;
+    box-shadow: 0 5px 6px 0 #cee0ff;
+    opacity: 0.5;
 }
 
 #w {

@@ -55,13 +55,9 @@ let buttonElementList = document.querySelectorAll(".instrument-btn");
 for (let i = 0; i < buttonElementList.length; i++) {
   buttonElementList[i].addEventListener('click', function() {
     let keyId = this.getAttribute("id");
-    colourOn(keyId);
     soundPlayer(keyId);
+    buttonAnimation(keyId);
     
-  });
-
-  buttonElementList[i].addEventListener('onmouseup', function() {
-    colourOff(this.getAttribute("id"));
   });
 }
 
@@ -76,18 +72,18 @@ document.addEventListener('keydown', event => {
     }
   } else {
     soundPlayer(event.key);
-    colourOn(event.key);
+    buttonAnimation(event.key);
   }
 });
 
-document.addEventListener('keyup', event => {
-    colourOff(event.key);
-});
+// document.addEventListener('keyup', event => {
+//     colourOff(event.key);
+// });
 
-function colourOn(id) {
-  document.querySelector("#"+id).classList.add("instrument-btn-clicked");
-}
-
-function colourOff(id) {
-  document.querySelector("#"+id).classList.remove("instrument-btn-clicked");
+function buttonAnimation(id) {
+  let button = document.querySelector("#"+id);
+  button.classList.add("instrument-btn-clicked");
+  setTimeout(function() {
+    button.classList.remove("instrument-btn-clicked");
+  }, 100);
 }
